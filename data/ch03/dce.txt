@@ -1,0 +1,2 @@
+result discarded: 0.000001 s
+result printed:   0.427557 s  (sum = 20.096509)

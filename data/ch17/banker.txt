@@ -1,0 +1,5 @@
+need: J0=(2,1,2) J1=(1,1,2) J2=(2,1,0) J3=(1,1,1)
+initial state: safe, order J1 J2 J3 J0
+J1 asks for (1,0,0): granted: the new state is safe
+J3 asks for (0,1,1): wait: granting would make the state unsafe
+J0 asks for (1,0,1): wait: not enough available now

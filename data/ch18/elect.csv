@@ -1,0 +1,6 @@
+n,ring_best,ring_worst,ring_random,bully_lowest_detects,bully_second_detects
+8,15,36,22,55,7
+16,31,136,54,239,15
+32,63,528,130,991,31
+64,127,2080,304,4031,63
+128,255,8256,695,16255,127

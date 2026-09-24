@@ -1,0 +1,6 @@
+mode,bytes,result
+both-write,1000,ok
+both-write,65536,ok
+both-write,65537,deadlock
+both-write,1000000,deadlock
+ordered,1000000,ok

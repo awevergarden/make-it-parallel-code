@@ -1,0 +1,140 @@
+--------------------------------------------------------------------------------
+Profile data file 'cg.out' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 587751999
+Trigger: Program termination
+Profiled target:  ./profile_g (PID 168, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+Ir                     
+--------------------------------------------------------------------------------
+2,533,045,328 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                      file:function
+--------------------------------------------------------------------------------
+1,798,796,725 (71.01%)  profile_demo.c:insertion_sort.constprop.0 [code/ch03/profile_g]
+  679,989,295 (26.84%)  profile_demo.c:smooth.constprop.0 [code/ch03/profile_g]
+   44,000,007 ( 1.74%)  profile_demo.c:generate.constprop.0 [code/ch03/profile_g]
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: profile_demo.c
+--------------------------------------------------------------------------------
+Ir                     
+
+-- line 20 ----------------------------------------
+            .           #include "../common/timer.h"
+            .           
+            .           #define N 4000000L
+            .           #define WINDOW 64
+            .           #define SAMPLE 30000
+            .           
+            .           static void generate(double *x, long n)
+            .           {
+            2 ( 0.00%)      unsigned long long s = 12345;
+   12,000,001 ( 0.47%)      for (long i = 0; i < n; i++) {           /* simple LCG */
+    8,000,003 ( 0.32%)          s = s * 6364136223846793005ULL + 1442695040888963407ULL;
+   24,000,000 ( 0.95%)          x[i] = (double)(s >> 11) / 9007199254740992.0;
+            .               }
+            1 ( 0.00%)  }
+            .           
+    3,999,937 ( 0.16%)  static void smooth(const double *x, double *y, long n, int w)
+            .           {
+   19,999,689 ( 0.79%)      for (long i = 0; i + w <= n; i++) {       /* naive moving average */
+    7,999,874 ( 0.32%)          double s = 0.0;
+  255,995,968 (10.11%)          for (int k = 0; k < w; k++)
+  383,993,952 (15.16%)              s += x[i + k];
+    7,999,874 ( 0.32%)          y[i] = s / w;
+            .               }
+            1 ( 0.00%)  }
+            .           
+            .           static void insertion_sort(double *a, long n)
+            .           {
+       90,000 ( 0.00%)      for (long i = 1; i < n; i++) {
+       89,997 ( 0.00%)          double v = a[i];
+            .                   long j = i - 1;
+1,573,778,370 (62.13%)          while (j >= 0 && a[j] > v) {
+  224,808,346 ( 8.88%)              a[j + 1] = a[j];
+            .                       j--;
+            .                   }
+       29,999 ( 0.00%)          a[j + 1] = v;
+            .               }
+           13 ( 0.00%)  }
+            .           
+            .           static int cmp_double(const void *p, const void *q)
+            .           {
+            .               double a = *(const double *)p, b = *(const double *)q;
+            .               return (a > b) - (a < b);
+            .           }
+            .           
+            .           static double summarize(const double *y, long n)
+            .           {
+            1 ( 0.00%)      double s = 0.0;
+    5,999,906 ( 0.24%)      for (long i = 0; i < n; i++)
+    3,999,937 ( 0.16%)          s += y[i];
+            1 ( 0.00%)      return s / n;
+            1 ( 0.00%)  }
+            .           
+            .           int main(int argc, char *argv[])
+           12 ( 0.00%)  {
+            2 ( 0.00%)      int use_qsort = argc > 1 && strcmp(argv[1], "qsort") == 0;
+            6 ( 0.00%)      double *x = malloc(N * sizeof *x), *y = malloc(N * sizeof *y);
+        2,291 ( 0.00%)  => ???:0x0000000000109130 (2x)
+            3 ( 0.00%)      double *sample = malloc(SAMPLE * sizeof *sample);
+          312 ( 0.00%)  => ???:0x0000000000109130 (1x)
+            8 ( 0.00%)      if (x == NULL || y == NULL || sample == NULL) {
+            .                   fprintf(stderr, "error: out of memory\n");
+            .                   return 1;
+            .               }
+            .               double t[5];
+            3 ( 0.00%)      t[0] = now_seconds();
+           33 ( 0.00%)  => code/ch03/../common/timer.h:now_seconds (1x)
+            2 ( 0.00%)      generate(x, N);
+   44,000,007 ( 1.74%)  => profile_demo.c:generate.constprop.0 (1x)
+            2 ( 0.00%)      t[1] = now_seconds();
+           33 ( 0.00%)  => code/ch03/../common/timer.h:now_seconds (1x)
+            3 ( 0.00%)      smooth(x, y, N, WINDOW);
+  679,989,295 (26.84%)  => profile_demo.c:smooth.constprop.0 (1x)
+            5 ( 0.00%)      t[2] = now_seconds();
+           33 ( 0.00%)  => code/ch03/../common/timer.h:now_seconds (1x)
+       30,001 ( 0.00%)      for (long k = 0; k < SAMPLE; k++)
+       75,000 ( 0.00%)          sample[k] = y[k * (N / SAMPLE)];
+            2 ( 0.00%)      if (use_qsort)
+            .                   qsort(sample, SAMPLE, sizeof *sample, cmp_double);
+            .               else
+            2 ( 0.00%)          insertion_sort(sample, SAMPLE);
+1,798,796,725 (71.01%)  => profile_demo.c:insertion_sort.constprop.0 (1x)
+            2 ( 0.00%)      t[3] = now_seconds();
+           33 ( 0.00%)  => code/ch03/../common/timer.h:now_seconds (1x)
+            6 ( 0.00%)      double mean = summarize(y, N - WINDOW + 1);
+    9,999,846 ( 0.39%)  => profile_demo.c:summarize.constprop.0 (1x)
+            2 ( 0.00%)      t[4] = now_seconds();
+           33 ( 0.00%)  => code/ch03/../common/timer.h:now_seconds (1x)
+            .           
+           12 ( 0.00%)      const char *name[] = {"generate", "smooth", "sort", "summarize"};
+            2 ( 0.00%)      double total = t[4] - t[0];
+            .               printf("step,seconds,percent\n");
+           16 ( 0.00%)      for (int k = 0; k < 4; k++)
+            .                   printf("%s,%.4f,%.1f\n", name[k], t[k + 1] - t[k],
+           16 ( 0.00%)                 (t[k + 1] - t[k]) / total * 100);
+            .               fprintf(stderr, "mean %.6f median %.6f\n", mean, sample[SAMPLE / 2]);
+            6 ( 0.00%)      free(x); free(y); free(sample);
+          215 ( 0.00%)  => ???:0x00000000001090e0 (3x)
+            1 ( 0.00%)      return 0;
+           11 ( 0.00%)  }
+
+--------------------------------------------------------------------------------
+Ir                     
+--------------------------------------------------------------------------------
+2,532,890,998 (99.99%)  events annotated
+

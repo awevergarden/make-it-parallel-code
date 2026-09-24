@@ -1,0 +1,7 @@
+n,result
+1,0 wrong of 1
+15,0 wrong of 225
+16,0 wrong of 256
+100,0 wrong of 10000
+128,0 wrong of 16384
+257,0 wrong of 66049

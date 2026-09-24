@@ -1,0 +1,7 @@
+rank 0 at (0,0) of 3x2: up -1 down 2 left -1 right 1
+rank 1 at (0,1) of 3x2: up -1 down 3 left 0 right -1
+rank 1 received column 2: 2 7 12 17
+rank 2 at (1,0) of 3x2: up 0 down 4 left -1 right 3
+rank 3 at (1,1) of 3x2: up 1 down 5 left 2 right -1
+rank 4 at (2,0) of 3x2: up 2 down -1 left -1 right 5
+rank 5 at (2,1) of 3x2: up 3 down -1 left 4 right -1

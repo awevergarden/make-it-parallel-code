@@ -1,0 +1,5 @@
+v4 identical to v1 for 1-16 threads
+tsan_v4_warnings,0
+tsan_race_warnings,1
+tsan_atomic_warnings,0
+tsan_queue_warnings,0

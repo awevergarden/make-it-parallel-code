@@ -1,0 +1,10 @@
+heartbeats,400
+longest_gap_ms,63.2
+timeout_ms,false_suspicions,detection_ms
+12,9,2.5
+15,8,5.5
+20,8,10.5
+30,7,20.5
+45,5,35.5
+60,1,50.5
+80,0,70.5

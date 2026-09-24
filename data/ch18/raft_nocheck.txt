@@ -1,0 +1,11 @@
+mode,nocheck
+runs,200
+simulated_seconds_each,10
+election_safety_violations,0
+apply_violations,8720
+runs_with_apply_violation,121
+leaders_elected,2459
+leader_crashes,2311
+mean_recovery_ms,194.8
+jobs_submitted,75836
+jobs_committed,71691

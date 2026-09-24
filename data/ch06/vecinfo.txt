@@ -1,0 +1,10 @@
+== heatsim_seq.c at -O2
+== heatsim_seq.c at -O3
+../heatsim/heatsim_seq.c:41:23: optimized: loop vectorized using 16 byte vectors
+../heatsim/heatsim_seq.c:41:23: optimized:  loop versioned for vectorization because of possible aliasing
+../heatsim/heatsim_seq.c:56:27: optimized: loop vectorized using 16 byte vectors
+../heatsim/heatsim_seq.c:56:27: optimized:  loop versioned for vectorization because of possible aliasing
+../heatsim/heatsim_seq.c:56:27: optimized: loop vectorized using 16 byte vectors
+../heatsim/heatsim_seq.c:56:27: optimized:  loop versioned for vectorization because of possible aliasing
+== heatsim_v3.c at -O2 -fopenmp-simd
+../heatsim/heatsim_v3.c:77:50: optimized: loop vectorized using 16 byte vectors

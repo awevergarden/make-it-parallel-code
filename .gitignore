@@ -1,0 +1,14 @@
+# Build products and results: keep only sources in the chapter folders
+code/*/*
+!code/*/*.c
+!code/*/*.h
+!code/*/*.cu
+!code/*/*.sh
+!code/*/*.py
+!code/*/*.csv
+!code/*/Makefile
+results/
+__pycache__/
+*.o
+snap_*.bin
+figures/

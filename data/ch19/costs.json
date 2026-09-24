@@ -1,0 +1,93 @@
+[
+ {
+  "key": "l1",
+  "label": "L1 cache hit",
+  "seconds": 1.6000000000000003e-09,
+  "source": "measured",
+  "chapter": "5"
+ },
+ {
+  "key": "atomic",
+  "label": "atomic increment",
+  "seconds": 6.400000000000001e-09,
+  "source": "measured",
+  "chapter": "7"
+ },
+ {
+  "key": "branch",
+  "label": "branch misprediction",
+  "seconds": 8.800000000000001e-09,
+  "source": "measured",
+  "chapter": "4"
+ },
+ {
+  "key": "mutex",
+  "label": "mutex lock and unlock",
+  "seconds": 2.2000000000000002e-08,
+  "source": "measured",
+  "chapter": "7"
+ },
+ {
+  "key": "mem",
+  "label": "main-memory access",
+  "seconds": 1.48e-07,
+  "source": "measured",
+  "chapter": "5"
+ },
+ {
+  "key": "mpi",
+  "label": "MPI message, same machine",
+  "seconds": 1e-06,
+  "source": "measured",
+  "chapter": "10"
+ },
+ {
+  "key": "pipe",
+  "label": "pipe message",
+  "seconds": 1.1e-06,
+  "source": "measured",
+  "chapter": "9"
+ },
+ {
+  "key": "cluster",
+  "label": "cluster network message",
+  "seconds": 2.5e-06,
+  "source": "published",
+  "chapter": "11"
+ },
+ {
+  "key": "tcp",
+  "label": "TCP message, same machine",
+  "seconds": 3.3999999999999996e-06,
+  "source": "measured",
+  "chapter": "9"
+ },
+ {
+  "key": "fork",
+  "label": "OpenMP fork or barrier",
+  "seconds": 4.9999999999999996e-06,
+  "source": "assumed",
+  "chapter": "8"
+ },
+ {
+  "key": "launch",
+  "label": "GPU kernel launch",
+  "seconds": 4.9999999999999996e-06,
+  "source": "assumed",
+  "chapter": "14"
+ },
+ {
+  "key": "thread",
+  "label": "create and join a thread",
+  "seconds": 9.3e-06,
+  "source": "measured",
+  "chapter": "7"
+ },
+ {
+  "key": "wan",
+  "label": "internet message (one way)",
+  "seconds": 0.018000000000000002,
+  "source": "measured",
+  "chapter": "11"
+ }
+]

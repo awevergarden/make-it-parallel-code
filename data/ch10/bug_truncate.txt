@@ -1,0 +1,7 @@
+rank 0 finished
+[vm:00927] *** An error occurred in MPI_Recv
+[vm:00927] *** reported by process [1868890113,1]
+[vm:00927] *** on communicator MPI_COMM_WORLD
+[vm:00927] *** MPI_ERR_TRUNCATE: message truncated
+[vm:00927] *** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+[vm:00927] ***    and potentially your MPI job)

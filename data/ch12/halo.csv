@@ -1,0 +1,15 @@
+processes,layout,dims,max_bytes,total_bytes
+1,rows,1x1,0,0
+1,squares,1x1,0,0
+2,rows,2x1,8192,16384
+2,squares,2x1,8192,16384
+4,rows,4x1,16384,49152
+4,squares,2x2,8192,32768
+8,rows,8x1,16384,114688
+8,squares,4x2,10240,65536
+16,rows,16x1,16384,245760
+16,squares,4x4,8192,98304
+32,rows,32x1,16384,507904
+32,squares,8x4,6144,163840
+64,rows,64x1,16384,1032192
+64,squares,8x8,4096,229376

@@ -1,0 +1,35 @@
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z10step_tiledPKdPdi' for 'sm_80'
+ptxas info    : Function properties for _Z10step_tiledPKdPdi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 18 registers, used 1 barriers, 2720 bytes smem, 372 bytes cmem[0], 32 bytes cmem[2]
+ptxas info    : Compile time = 3.811 ms
+ptxas info    : Compiling entry function '_Z11step_simplePKdPdi' for 'sm_80'
+ptxas info    : Function properties for _Z11step_simplePKdPdi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 18 registers, used 0 barriers, 372 bytes cmem[0]
+ptxas info    : Compile time = 1.709 ms
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z10step_tiledPKdPdi' for 'sm_90'
+ptxas info    : Function properties for _Z10step_tiledPKdPdi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 20 registers, used 1 barriers, 2720 bytes smem
+ptxas info    : Compile time = 4.724 ms
+ptxas info    : Compiling entry function '_Z11step_simplePKdPdi' for 'sm_90'
+ptxas info    : Function properties for _Z11step_simplePKdPdi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 20 registers, used 0 barriers
+ptxas info    : Compile time = 2.139 ms
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z12matmul_tiledPKdS0_Pdi' for 'sm_80'
+ptxas info    : Function properties for _Z12matmul_tiledPKdS0_Pdi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 23 registers, used 1 barriers, 4096 bytes smem, 380 bytes cmem[0], 16 bytes cmem[2]
+ptxas info    : Compile time = 4.803 ms
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z10block_sumsPKdlPd' for 'sm_80'
+ptxas info    : Function properties for _Z10block_sumsPKdlPd
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, used 1 barriers, 2048 bytes smem, 376 bytes cmem[0]
+ptxas info    : Compile time = 4.742 ms
+host code compiled

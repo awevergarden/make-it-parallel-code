@@ -1,0 +1,13 @@
+variant,n,run,ns_per_element
+naive,1024,1,6.685
+tiled,1024,1,4.524
+naive,1024,2,6.760
+tiled,1024,2,4.578
+naive,1024,3,6.624
+tiled,1024,3,4.646
+naive,4096,1,10.436
+tiled,4096,1,6.144
+naive,4096,2,11.875
+tiled,4096,2,5.309
+naive,4096,3,11.009
+tiled,4096,3,4.658

@@ -1,0 +1,15 @@
+kernel,n,result
+simple,3,identical
+tiled,3,identical
+simple,4,identical
+tiled,4,identical
+simple,35,identical
+tiled,35,identical
+simple,257,identical
+tiled,257,identical
+simple,300,identical
+tiled,300,identical
+simple,129,25C ok
+tiled,129,25C ok
+omp_target_t1,300,identical
+omp_target_t3,300,identical

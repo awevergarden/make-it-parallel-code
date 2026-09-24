@@ -1,0 +1,12 @@
+coordinator,commit,messages,9
+participant,1,commit,not_blocked,0.00
+participant,2,commit,not_blocked,0.00
+participant,3,commit,not_blocked,0.00
+coordinator,abort,messages,9
+participant,1,abort,not_blocked,0.00
+participant,2,abort,not_blocked,0.00
+participant,3,abort,not_blocked,0.00
+coordinator,crash,messages,21
+participant,1,commit,was_blocked,2.00
+participant,2,commit,was_blocked,2.00
+participant,3,commit,was_blocked,2.00

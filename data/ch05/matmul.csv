@@ -1,0 +1,10 @@
+variant,run,GFLOPs
+ijk,1,0.500
+ikj,1,4.027
+tiled,1,3.540
+ijk,2,0.530
+ikj,2,3.882
+tiled,2,3.820
+ijk,3,0.524
+ikj,3,3.965
+tiled,3,3.748

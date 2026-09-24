@@ -1,0 +1,2 @@
+job_script,syntax ok
+fs_type,ext4

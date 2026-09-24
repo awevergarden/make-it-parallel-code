@@ -1,0 +1,4 @@
+rank 0 got 3 values starting with 1; partial sum 6
+rank 1 got 3 values starting with 4; partial sum 15
+rank 2 got 4 values starting with 7; partial sum 34
+total 55 (expected 55)

@@ -1,0 +1,13 @@
+run,op,latency_ns,throughput_ns
+1,add,0.761,0.180
+1,multiply,1.747,0.181
+1,divide,5.200,1.421
+1,sqrt,7.918,2.295
+2,add,0.767,0.186
+2,multiply,1.573,0.200
+2,divide,5.171,1.421
+2,sqrt,7.741,2.134
+3,add,0.786,0.182
+3,multiply,1.603,0.217
+3,divide,5.416,1.442
+3,sqrt,7.748,2.118

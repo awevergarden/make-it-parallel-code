@@ -1,0 +1,7 @@
+quantity,value
+strips_half_perimeter,5.000
+columns_half_perimeter,4.000
+columns_grouping,1+1 | 2+4
+lower_bound,3.828
+equal_split_time,0.2500
+proportional_time,0.1250

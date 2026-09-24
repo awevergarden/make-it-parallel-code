@@ -1,0 +1,4 @@
+algorithm,n,processes,wrong,max_received,total_received,seconds
+cannon,720,4,0,518400,1555200,1.638
+cannon,720,9,343823,345600,2764800,1.645
+cannon,720,16,221288,259200,3888000,1.689

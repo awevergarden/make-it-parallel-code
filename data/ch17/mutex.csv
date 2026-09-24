@@ -1,0 +1,13 @@
+mode,processes,entries,violations,messages,msgs_per_entry
+none,2,40,16,0,0.00
+central,2,20,0,61,3.05
+ra,2,40,0,82,2.05
+token,2,40,0,41,1.02
+none,4,80,46,0,0.00
+central,4,60,0,183,3.05
+ra,4,80,0,492,6.15
+token,4,80,0,83,1.04
+none,6,120,83,0,0.00
+central,6,100,0,305,3.05
+ra,6,120,0,1230,10.25
+token,6,120,0,125,1.04

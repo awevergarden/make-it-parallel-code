@@ -1,0 +1,1 @@
+parent read the child's data: sum = 249750.0 (expected 249750.0)

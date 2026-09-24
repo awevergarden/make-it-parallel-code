@@ -1,0 +1,11 @@
+mode,raft
+runs,200
+simulated_seconds_each,10
+election_safety_violations,0
+apply_violations,0
+runs_with_apply_violation,0
+leaders_elected,2483
+leader_crashes,2326
+mean_recovery_ms,203.3
+jobs_submitted,74677
+jobs_committed,71396

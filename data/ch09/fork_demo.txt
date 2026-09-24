@@ -1,0 +1,2 @@
+child:  counter = 15
+parent: counter = 10 (child exited with 0)

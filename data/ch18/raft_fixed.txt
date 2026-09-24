@@ -1,0 +1,11 @@
+mode,fixed
+runs,200
+simulated_seconds_each,10
+election_safety_violations,0
+apply_violations,0
+runs_with_apply_violation,0
+leaders_elected,1064
+leader_crashes,934
+mean_recovery_ms,572.1
+jobs_submitted,27420
+jobs_committed,26514

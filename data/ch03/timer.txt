@@ -1,0 +1,3 @@
+reported resolution: 1 ns
+smallest observed step: 30 ns
+cost per reading: 35.6 ns

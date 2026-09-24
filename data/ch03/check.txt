@@ -1,0 +1,2 @@
+center temperature after 50000 steps: 25.0000 C
+time: 0.578310 s, 1394.5 million cell updates per second

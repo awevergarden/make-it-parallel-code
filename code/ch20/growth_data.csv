@@ -1,0 +1,32 @@
+kind,year,name,value,unit
+transistors,1971,Intel 4004,2300,transistors
+transistors,1974,Intel 8080,4500,transistors
+transistors,1978,Intel 8086,29000,transistors
+transistors,1982,Intel 80286,134000,transistors
+transistors,1985,Intel 80386,275000,transistors
+transistors,1989,Intel 80486,1200000,transistors
+transistors,1993,Intel Pentium,3100000,transistors
+transistors,1997,Intel Pentium II,7500000,transistors
+transistors,2000,Intel Pentium 4,42000000,transistors
+transistors,2006,Intel Core 2 Duo,291000000,transistors
+transistors,2010,Intel Core i7 (six-core),1170000000,transistors
+transistors,2017,AMD Epyc (Naples),19200000000,transistors
+transistors,2020,Apple M1,16000000000,transistors
+transistors,2022,NVIDIA H100,80000000000,transistors
+transistors,2022,Apple M1 Ultra (two dies),114000000000,transistors
+transistors,2024,NVIDIA B200 (two dies),208000000000,transistors
+top500,1993.5,CM-5,59.7e9,flops
+top500,1997.5,ASCI Red,1.068e12,flops
+top500,2002.5,Earth Simulator,35.86e12,flops
+top500,2004.9,BlueGene/L,70.72e12,flops
+top500,2008.5,Roadrunner,1.026e15,flops
+top500,2011.5,K computer,8.162e15,flops
+top500,2012.5,Sequoia,16.32e15,flops
+top500,2012.9,Titan,17.59e15,flops
+top500,2013.5,Tianhe-2,33.86e15,flops
+top500,2016.5,Sunway TaihuLight,93.0e15,flops
+top500,2018.5,Summit,122.3e15,flops
+top500,2020.5,Fugaku,415.5e15,flops
+top500,2022.5,Frontier,1.102e18,flops
+top500,2024.9,El Capitan,1.742e18,flops
+top500,2026.5,LineShine,2.198e18,flops

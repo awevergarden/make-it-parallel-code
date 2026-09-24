@@ -1,0 +1,5 @@
+workers,utilization,jobs,mean_wait_min
+4,0.80,exp,7.296
+8,0.80,exp,2.801
+16,0.80,exp,0.930
+32,0.80,exp,0.243

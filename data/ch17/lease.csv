@@ -1,0 +1,3 @@
+fencing,trials,a_lease_expired_before_write,stale_writes_accepted,stale_writes_rejected
+no,50,29,29,0
+yes,50,29,0,29

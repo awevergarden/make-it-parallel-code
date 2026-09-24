@@ -1,0 +1,11 @@
+processes,threads,dims,result
+1,1,auto,identical
+2,1,auto,identical
+4,1,auto,identical
+4,2,auto,identical
+4,1,4x1,identical
+4,1,1x4,identical
+6,3,auto,identical
+8,2,auto,identical
+9,1,auto,identical
+12,1,auto,identical

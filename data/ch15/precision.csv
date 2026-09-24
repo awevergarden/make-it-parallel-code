@@ -1,0 +1,8 @@
+format,bits,accumulate,relative_error
+float32,32,float32,3.78e-07
+bfloat16,16,float32,2.38e-03
+bfloat16,16,bfloat16,7.15e-02
+float16,16,float32,2.96e-04
+float16,16,float16,9.55e-03
+fp8_e4m3,8,float32,3.78e-02
+int8,8,int32 (exact),1.56e-02
