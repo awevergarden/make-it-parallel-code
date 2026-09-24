@@ -54,6 +54,20 @@ Some kits need MPI and run many processes on one machine
 the CUDA Toolkit (`make cuda`), and otherwise can be checked with the CPU
 emulators in `code/ch14`.
 
+## If MPI programs run very slowly
+
+On some virtual machines, including cloud and CI machines, Open MPI keeps
+waiting processes spinning, and processes that share a core then starve one
+another: a run that should take a second can take minutes. Ask waiting
+processes to yield the processor, and let the operating system place them:
+
+```sh
+mpirun --oversubscribe --bind-to none --mca mpi_yield_when_idle 1 -np 4 ./program
+```
+
+For OpenMP threads, `export OMP_WAIT_POLICY=passive` has the same effect.
+`make check` uses these settings.
+
 ## Feedback
 
 Found a bug, or a result that differs a lot from the book's? Please open an
