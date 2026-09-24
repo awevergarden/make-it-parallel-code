@@ -4,9 +4,9 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04        # the system the book's results were tested on
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Install the book's tools
         run: |
           sudo apt-get update
