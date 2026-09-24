@@ -54,18 +54,21 @@ Some kits need MPI and run many processes on one machine
 the CUDA Toolkit (`make cuda`), and otherwise can be checked with the CPU
 emulators in `code/ch14`.
 
-## If MPI programs run very slowly
+## If MPI programs with threads run very slowly
 
-On some virtual machines, including cloud and CI machines, Open MPI keeps
-waiting processes spinning, and processes that share a core then starve one
-another: a run that should take a second can take minutes. Ask waiting
-processes to yield the processor, and let the operating system place them:
+A waiting MPI process normally spins, checking for messages at full speed.
+Open MPI decides whether that is safe by counting processes, not threads, so
+when a hybrid program's processes and OpenMP threads together outnumber the
+cores (for example, HeatSim v7 with 4 processes of 2 threads on a 4-core
+machine), the spinning waits starve the threads doing the work: a run that
+should take a second can take minutes. Ask waiting processes to yield the
+processor, and let OpenMP threads wait passively:
 
 ```sh
-mpirun --oversubscribe --bind-to none --mca mpi_yield_when_idle 1 -np 4 ./program
+export OMP_WAIT_POLICY=passive
+mpirun --mca mpi_yield_when_idle 1 -np 4 ./program
 ```
 
-For OpenMP threads, `export OMP_WAIT_POLICY=passive` has the same effect.
 `make check` uses these settings.
 
 ## Feedback

@@ -8,11 +8,12 @@ cd "$(dirname "$0")/.."
 if [ "$(id -u)" = 0 ]; then
     export OMPI_ALLOW_RUN_AS_ROOT=1 OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
 fi
-# Waiting MPI processes must yield the processor: on machines that report
-# more cores than they really have (such as cloud VMs), Open MPI otherwise
-# spins, and the processes starve one another -- a test that takes a second
-# can take minutes. Threads wait passively for the same reason.
-MPIRUN="mpirun --oversubscribe --bind-to none --mca mpi_yield_when_idle 1"
+# Waiting MPI processes must yield the processor. Open MPI decides whether to
+# spin by counting processes, not threads: when processes and their OpenMP
+# threads together outnumber the cores (HeatSim v7 runs 4 x 2 threads), the
+# spinning waits starve the threads doing the work, and a one-second test
+# takes minutes. Threads also wait passively, which helps a little more.
+MPIRUN="mpirun --oversubscribe --mca mpi_yield_when_idle 1"
 export OMP_WAIT_POLICY=passive
 fail=0
 check() {   # check NAME COMMAND...
